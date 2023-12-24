@@ -1,3 +1,5 @@
+const bootstrap = require('bootstrap')
+
 const burgerIcon = document.querySelector('#burger');
 const navbarMenu = document.querySelector('#navbarMenu');
 
@@ -6,6 +8,10 @@ var Instagram = document.getElementById('instagram');
 var Youtube = document.getElementById('youtube');
 var Linkedin = document.getElementById('linkedin');
 
+  
+document.getElementById('mobile-menu-button').addEventListener('click', function() {
+    document.getElementById('navbarMenu').classList.toggle('show');
+})
 
 burgerIcon.addEventListener('click', () =>{
     navbarMenu.classList.toggle('is-active');
@@ -29,13 +35,6 @@ burgerIcon.addEventListener('click', () =>{
     var filePath = './DanielAsratCV.pdf'
     window.open(filePath)
   }
-  function toggleMobileMenu() {
-    var menu = document.getElementById('mobile-menu');
-    var button = document.getElementById('mobile-menu-button');
-
-    menu.classList.toggle('hidden');
-    button.innerHTML = menu.classList.contains('hidden') ? '<span class="fa fa-bars"></span>' : '<span class="fa fa-times"></span>';
-}
 
 
   Facebook.addEventListener('click', function() {

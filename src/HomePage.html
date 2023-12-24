@@ -6,21 +6,21 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
 </head>
 <body class="bg-light">
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation" id="mobile-menu-button">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link font-weight-bold text-primary display-4" href="./HomePage.html">Portfolio</a>
-                </li>
-            </ul>
-            <div class="collapse navbar-collapse" id="navbarMenu">               
-                <div class="d-flex justify-content-center align-items-center flex-grow-1">
+        
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <a class="nav-link fw-bold text-primary fs-2" href="./HomePage.html">Portfolio</a>
+        
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <div class="d-flex justify-content-center align-items-center flex-grow-1">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link mx-4" href="./HomePage.html">Home</a>
@@ -35,11 +35,12 @@
                             <a class="nav-link mx-4" href="./Works.html">Works</a>
                         </li>
                     </ul>
-                    </div>  
-                    <div>            
+                    </div>
+                    <div>
                         <button class="btn btn-primary rounded-pill" id="button_contact">Contact me</button>
-                    </div>          
-            </div> 
+                    </div>
+                </div>
+            </div>          
         </nav>
     </header>
     <main class="py-5">
@@ -99,10 +100,11 @@
             <h5 class="display-10">Copyright &copy; 2023 Daniel Asrat</h5>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/index.js"></script>
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('navbarMenu').classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
